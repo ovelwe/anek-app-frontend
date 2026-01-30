@@ -1,0 +1,52 @@
+:root {
+    --color-bg: #141414;
+    --color-accent: #C7FF10;
+    --color-text: #FBF8EF;
+    --color-surface: #1e1e1e;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: 'Inter', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Атомарные стили для кнопок */
+.btn {
+    background: var(--color-accent);
+    color: #000;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: var(--transition);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.btn:hover { opacity: 0.9; transform: translateY(-1px); }
+.btn:active { transform: translateY(0); }
+
+.btn-outline {
+    background: transparent;
+    border: 1px solid var(--color-accent);
+    color: var(--color-accent);
+}
+
+.input {
+    background: var(--color-surface);
+    border: 1px solid #333;
+    color: var(--color-text);
+    padding: 0.8rem;
+    border-radius: 8px;
+    width: 100%;
+}
+
+.input:focus { border-color: var(--color-accent); outline: none; }
